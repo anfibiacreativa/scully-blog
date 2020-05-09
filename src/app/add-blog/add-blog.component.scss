@@ -1,0 +1,45 @@
+.addblog {
+  &__base {
+    border: 3px solid rgb(3, 65, 113);
+    padding: 30px;
+    background-color: #FFFFFF;
+  }
+  &__label,
+  &__textarea {
+    display: block;
+  }
+  &__textarea {
+    line-height: 1;
+    font-size: 18px;
+  }
+  &__label {
+    color: rgb(3, 65, 113);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  &__textarea {
+    width: 100%;
+    min-height: 300px;
+    border: 0;
+  }
+
+  &__button {
+    transition: all 0.5s ease-in-out;
+    padding: 7px 15px;
+    border: 1px solid transparent;
+    background-color: rgb(21, 94, 150);
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #FFFFFF;
+      color: rgb(21, 94, 150);
+      border: 1px solid rgb(21, 94, 150);;
+    }
+  }
+}

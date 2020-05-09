@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+.body__base {
+  background-color: rgb(228, 241, 252);;
+}
+.main {
+  &__base {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.entry {
+  &__base {
+    background-color: #FFFFFF;
+    padding: 30px;
+  }
+
+  &__list,
+  &__listItem {
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
