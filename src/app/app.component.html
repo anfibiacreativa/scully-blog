@@ -1,11 +1,13 @@
-<div class="entry__base">
-  <ul class="entry__list">
-    <li class="entry__listItem" *ngFor="let entry of entries$ | async">
-      <h2><a [routerLink]="entry.route">{{ entry.title }}</a></h2>
-      <p class="entry__txt">{{ entry.description }}</p>
-    </li>
-  </ul>
+<app-header></app-header>
+<div class="component__innerWrapper">
+  <div class="entry__base">
+    <ul class="entry__list">
+      <li class="entry__listItem" *ngFor="let entry of entries$ | async">
+        <h2><a [routerLink]="entry.route">{{ entry.title }}</a></h2>
+        <p class="entry__txt">{{ entry.description }}</p>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
-<app-add-blog></app-add-blog>

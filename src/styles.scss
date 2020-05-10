@@ -3,17 +3,17 @@
 .body__base {
   background-color: rgb(228, 241, 252);;
 }
-.main {
-  &__base {
-    width: 70%;
-    margin: 0 auto;
-  }
+
+.component__innerWrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .entry {
   &__base {
     background-color: #FFFFFF;
     padding: 30px;
+    margin-top: 100px;
   }
 
   &__list,
