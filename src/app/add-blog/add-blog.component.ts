@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Rule, SchematicContext, Tree, schematic, chain } from '@angular-devkit/schematics';
+import { initConfig } from '../../commons/constants/constants';
 
 @Component({
   selector: 'app-add-blog',
@@ -8,20 +8,13 @@ import { Rule, SchematicContext, Tree, schematic, chain } from '@angular-devkit/
   styleUrls: ['./add-blog.component.scss']
 })
 export class AddBlogComponent  {
-  config = `
-    --- \n
-    title: \n
-    description: \n
-    published: false \n
-    slugs: \n
-    --- \n
-  `;
+  config = initConfig;
   entry = new FormControl(this.config);
 
   constructor(
   ) {}
 
   addEntry(): void {
-
+    // create each entry
   }
 }
