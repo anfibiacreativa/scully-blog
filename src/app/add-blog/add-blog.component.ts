@@ -8,8 +8,9 @@ import { initConfig } from '../../commons/constants/constants';
   styleUrls: ['./add-blog.component.scss']
 })
 export class AddBlogComponent  {
-  config = initConfig;
-  entry = new FormControl(this.config);
+  options = initConfig;
+  config = new FormControl(this.options);
+  entry = new FormControl('Start typing markdown here...');
 
   constructor(
   ) {}

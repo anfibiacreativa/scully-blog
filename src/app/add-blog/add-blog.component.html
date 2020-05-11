@@ -4,7 +4,9 @@
       <label class="addblog__label">
         New Blog Entry:
       </label>
+      <textarea class="addblog__textarea config" type="textarea" [formControl]="config"></textarea>
       <textarea class="addblog__textarea" type="textarea" [formControl]="entry"></textarea>
+      <button class="addblog__button addblog__button--light" type="submit">Upload Cover Image</button>
       <button class="addblog__button" type="submit">Post!</button>
     </form>
   </div>

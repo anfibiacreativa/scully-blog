@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+  title: string;
   entries$: Observable<ScullyRoute[]>;
 
   constructor(

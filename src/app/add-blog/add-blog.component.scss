@@ -3,14 +3,28 @@
     border: 3px solid rgb(3, 65, 113);
     padding: 30px;
     background-color: #FFFFFF;
+    margin-bottom: 100px;
   }
   &__label,
   &__textarea {
     display: block;
   }
   &__textarea {
-    line-height: 1;
     font-size: 18px;
+    width: 100%;
+    min-height: 300px;
+    border: 0;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.config {
+      line-height: 11px;
+      min-height: 150px;
+      overflow: hidden;
+    }
   }
   &__label {
     color: rgb(3, 65, 113);
@@ -18,12 +32,8 @@
     font-weight: bold;
     font-size: 25px;
   }
-  &__textarea {
-    width: 100%;
-    min-height: 300px;
-    border: 0;
-  }
   &__button {
+    display: inline-block;
     transition: all 0.5s ease-in-out;
     padding: 7px 15px;
     border: 1px solid transparent;
@@ -34,6 +44,14 @@
     margin-top: 15px;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
+
+    &--light {
+      font-weight: bold;
+      border: 1px solid transparent;
+      color: rgb(21, 94, 150);
+      background-color: rgb(199, 211, 220);
+      margin-right: 10px;
+    }
 
     &:hover,
     &:focus {
