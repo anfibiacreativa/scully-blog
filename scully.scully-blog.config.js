@@ -4,7 +4,6 @@ exports.config = {
   projectRoot: "./src",
   projectName: "scully-blog",
   outDir: './dist/static',
-  defaultRenderers:'renderData',
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
@@ -14,11 +13,11 @@ exports.config = {
     },
     '/entries/:title': {
       type: 'json',
+      defaultPostRenderers: ['dataFetch'],
       title: {
         url: 'http://demo7107977.mockable.io/content/blog/entries',
         property: 'title'
-      },
-      defaultRenderers: 'fecthData'
+      }
     }
   }
 };
