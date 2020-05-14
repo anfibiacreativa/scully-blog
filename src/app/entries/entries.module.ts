@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { EntriesRoutingModule } from './entries-routing.module';
 import { EntriesComponent } from './entries.component';
-
+import { ReadEntryComponent } from '../read-entry/read-entry.component';
 
 @NgModule({
-  declarations: [EntriesComponent],
+  declarations: [
+    EntriesComponent,
+    ReadEntryComponent
+  ],
   imports: [
     CommonModule,
     EntriesRoutingModule
   ]
 })
-export class EntriesModule { }
+export class EntriesModule { 
+
+}
