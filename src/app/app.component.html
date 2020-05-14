@@ -3,8 +3,8 @@
   <div class="entry__base">
     <ul class="entry__list">
       <li class="entry__listItem" *ngFor="let entry of entries$ | async">
-        <h2><a [routerLink]="entry.route">{{ entry.title }}</a></h2>
-        <p class="entry__txt">{{ entry.description }}</p>
+        <h2><a [routerLink]="entry.route">{{ entry.title || defaultTitle }}</a></h2>
+        <p class="entry__txt">{{ entry.description || defaultSummary }}</p>
       </li>
     </ul>
   </div>
