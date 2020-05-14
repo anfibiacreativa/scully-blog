@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { initConfig } from '../../commons/constants/constants';
+import { initConfig } from '../commons/constants/constants';
 
 @Component({
   selector: 'app-add-blog',
