@@ -2,10 +2,9 @@ const {
   httpGetJson
 } = require('@scullyio/scully');
 
-let r = [];
+// replace call to your url
 const getData = httpGetJson('http://demo7107977.mockable.io/content/blog/entries')
 .then(response => { 
-  console.log(response, '#### this is the response ####');
   return response;
 });;
 

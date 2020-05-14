@@ -13,9 +13,7 @@ const data = require('./fetchData');
 async function getEntryDataPlugin (route, html) {
   let entries = [];
   data.GET_DATA.then((response) => {
-    console.log(response, '###response');
     entries = Object.keys(entries);
-    console.log(response, '###whatthehell');
     const entryTitle = entries.filter(entry => entry.title === html.route);
     const body = '</body>';
     const [begin, end] = body.split(body);
@@ -23,9 +21,6 @@ async function getEntryDataPlugin (route, html) {
     return Promise.resolve(`${begin}${title}${body}${end}
     `);
   });
-/*   console.log(html);
-  // return Promise.resolve(html);
-  */
 }
 
 getEntryDataPlugin[configValidator] = async options => {

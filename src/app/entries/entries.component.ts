@@ -27,8 +27,6 @@ export class EntriesComponent implements OnInit {
         this.entries = entries; 
         const entry = this.getCurrentEntry(this.entries, this.currentRoute);
         this.currentEntry = entry[0];
-        console.log(this.currentEntry, 'hey current entry');
-        console.log(JSON.stringify(this.currentEntry), 'hey current entry');
       });
   }
 
