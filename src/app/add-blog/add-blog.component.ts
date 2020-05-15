@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { initConfig } from '../commons/constants/constants';
+import { parse } from 'yamljs';
 
 @Component({
   selector: 'app-add-blog',
