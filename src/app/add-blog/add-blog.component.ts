@@ -11,7 +11,7 @@ import { Yaml } from 'yamljs/lib/Yaml';
 })
 export class AddBlogComponent implements OnInit {
   options = initConfig;
-  entryConfigPath: string = '../../assets/config/entry-config.yaml';
+  entryConfigPath: string = '../../assets/configs/entry-config.yaml';
   config = new FormControl(this.options);
   entry = new FormControl('Start typing markdown here...');
 
@@ -29,7 +29,7 @@ export class AddBlogComponent implements OnInit {
 
   ngOnInit(): void {
     let entryConfig = this.readEntryConfig();
-    Yaml.parse(entryConfig);
+    // Yaml.parse(entryConfig);
     console.log(entryConfig);
   }
 }

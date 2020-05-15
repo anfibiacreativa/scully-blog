@@ -34,7 +34,7 @@
   }
   &__button {
     display: inline-block;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     padding: 7px 15px;
     border: 1px solid transparent;
     background-color: rgb(21, 94, 150);
@@ -55,7 +55,7 @@
 
     &:hover,
     &:focus {
-      background-color: #FFFFFF;
+      background-color:rgb(199, 211, 220);
       color: rgb(21, 94, 150);
       border: 1px solid rgb(21, 94, 150);;
     }
