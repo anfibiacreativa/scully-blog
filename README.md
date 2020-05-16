@@ -37,6 +37,7 @@ Go to mockable.io and create an endpoint that returns a json like this
      "slug": ""
     },
     `
+
 with as many items as you wish.
 Replace the API endpoint url in the scully config `scully.scully-blog.config.js` and in the app constants `src/app/commons/constants/constants.ts`
 
@@ -46,9 +47,11 @@ Run `npm run scully` or `npm run scully -- --scanRoutes`.
 
 ## Link and run the companion schematics
 
-Checkout the companion schematic and build it with `npm run build`. Link it running `npm run link` in the schematics folder and `npm run link html-to-md-entry` in the app root.
+Checkout the companion schematic 
+https://github.com/anfibiacreativa/html-to-md-entry/blob/master/README.md
+and build it with `npm run build`. Link it running `npm run link` in the schematics folder and `npm run link html-to-md-entry` in the app root.
 
-Run the schematics with `ng generate html-to-md-entry:html-to-md-entry`
+Run the schematics with `ng generate html-to-md-entry:html-to-md-entry --path=entries`
 
 Serve the static Scully site with `npm run scully serve`
 
