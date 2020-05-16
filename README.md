@@ -1,27 +1,57 @@
 # ScullyBlog
+This is a work in progress as I play with Scully to better understand it!
+Still figuring out the YAML part and how to better leveage config.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+
+Install it with `npm install` and build with `ng build`
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Replace the API urls with yours
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Go to mockable.io and create an endpoint that returns a json like this
 
-## Build
+`[
+    {
+     "title": "New Dynamic Post 1",
+     "description": "Some Random description for a blog post 1",
+     "published": true,
+     "static": false,
+     "slug": ""
+    },
+    {
+     "title": "New Dynamic Post 2",
+     "description": "Some Random description for a blog post 2",
+     "published": true,
+     "static": false,
+     "slug": ""
+    },
+    {
+     "title": "New Dynamic Post 3",
+     "description": "Some Random description for a blog post 3",
+     "published": true,
+     "static": false,
+     "slug": ""
+    },
+    `
+with as many items as you wish.
+Replace the API endpoint url in the scully config `scully.scully-blog.config.js` and in the app constants `src/app/commons/constants/constants.ts`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Generating static files with Scully
 
-## Running unit tests
+Run `npm run scully` or `npm run scully -- --scanRoutes`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Link and run the companion schematics
 
-## Running end-to-end tests
+Checkout the companion schematic and build it with `npm run build`. Link it running `npm run link` in the schematics folder and `npm run link html-to-md-entry` in the app root.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run the schematics with `ng generate html-to-md-entry:html-to-md-entry`
 
-## Further help
+Serve the static Scully site with `npm run scully serve`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## More help
+
+Follow me on twitter or watch this repo, to keep up with progress!
