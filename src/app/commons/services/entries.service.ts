@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { Entry } from '../declarations/entry.d'
+import { Entry } from '../declarations/entry.d';
 import { api_url } from '../constants/constants';
 
 @Injectable({

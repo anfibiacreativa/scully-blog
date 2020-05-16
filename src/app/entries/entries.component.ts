@@ -24,7 +24,7 @@ export class EntriesComponent implements OnInit {
     this.entriesService.getEntries()
     .subscribe(
       entries => {
-        this.entries = entries; 
+        this.entries = entries;
         const entry = this.getCurrentEntry(this.entries, this.currentRoute);
         this.currentEntry = entry[0];
       });

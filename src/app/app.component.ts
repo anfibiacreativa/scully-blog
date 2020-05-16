@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit {
   title: string;
   entries$: Observable<ScullyRoute[]>;
-  defaultTitle: string = 'New Entry';
-  defaultSummary: string = 'New Description';
+  defaultTitle = 'New Entry';
+  defaultSummary = 'New Description';
 
   constructor(
     private entries: ScullyRoutesService

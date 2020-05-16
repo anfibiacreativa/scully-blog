@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Entry } from '../declarations/entry.d'
+import { Entry } from '../declarations/entry.d';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -19,13 +19,13 @@ export class ConfigService {
   }
 
   processConfig(configuration: string): void {
-    let pair: string[] = configuration.split('\n'); 
-    let config = {};
-    pair.forEach((pair: string) => {
-      let delimiter = pair.indexOf(':');  
-      let key = pair.substr(0, delimiter - 1);  
-      let value = pair.substr(delimiter + 1);  
-      config[key] = value;  
+    const pairs: string[] = configuration.split('\n');
+    const config = {};
+    pairs.forEach((pair: string) => {
+      const delimiter = pair.indexOf(':');
+      const key = pair.substr(0, delimiter - 1);
+      const value = pair.substr(delimiter + 1);
+      config[key] = value;
     });
   }
 }
