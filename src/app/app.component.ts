@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.entries$ = this.entries.available$;
+
   }
 }

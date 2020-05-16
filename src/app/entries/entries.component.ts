@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Entry } from '../commons/declarations/entry.d';
 import { EntriesService } from '../commons/services/entries.service';
-import { Routes, RouterModule, ActivatedRoute } from '@angular/router'; // CLI imports router
-import { Route } from '@angular/compiler/src/core';
+import { Router, RouterModule, ActivatedRoute, NavigationEnd } from '@angular/router'; // CLI imports router
 
 @Component({
   selector: 'app-entries',
@@ -17,7 +16,8 @@ export class EntriesComponent implements OnInit {
 
   constructor(
     private entriesService: EntriesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   getEntries() {
@@ -34,11 +34,15 @@ export class EntriesComponent implements OnInit {
     return  entries.filter(entry => entry.title === url);
   }
 
-  ngOnInit(): void {
-    this.getEntries();
+  getCurrentRoute(): void {
     this.route.url
         .subscribe(url => {
             this.currentRoute = url[0].path;
         });
+  }
+
+  ngOnInit(): void {
+    this.getEntries();
+    this.getCurrentRoute();
   }
 }
