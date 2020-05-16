@@ -1,11 +1,11 @@
 <div class="component__innerWrapper">
   <div class="addblog__base">
     <form class="addblog__form">
-      <label class="addblog__label">
+      <label for="new-entry" class="addblog__label">
         New Blog Entry:
       </label>
-      <textarea class="addblog__textarea config" type="textarea" [formControl]="config"></textarea>
-      <textarea class="addblog__textarea" type="textarea" [formControl]="entry"></textarea>
+      <textarea name="configuration" class="addblog__textarea config" type="textarea" [formControl]="config"></textarea>
+      <textarea name="new-entry" class="addblog__textarea" type="textarea" [formControl]="entry"></textarea>
       <button class="addblog__button addblog__button--light" type="submit">Upload Cover Image</button>
       <button class="addblog__button" type="submit">Post!</button>
     </form>

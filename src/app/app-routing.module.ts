@@ -4,9 +4,9 @@ import { AddBlogComponent } from './add-blog/add-blog.component';
 
 
 const routes: Routes = [
-  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) 
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   },
-  { path: 'entries', loadChildren: () => import('./entries/entries.module').then(m => m.EntriesModule) 
+  { path: 'entries', loadChildren: () => import('./entries/entries.module').then(m => m.EntriesModule)
   },
   {
     path: 'add-blog',

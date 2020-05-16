@@ -15,6 +15,6 @@ import { ReadEntryComponent } from '../read-entry/read-entry.component';
     EntriesRoutingModule
   ]
 })
-export class EntriesModule { 
+export class EntriesModule {
 
 }

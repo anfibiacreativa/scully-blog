@@ -3,13 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Entry } from '../declarations/entry.d';
-import { api_url } from '../constants/constants';
+import { API_URL } from '../constants/constants';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EntriesService {
-  private url: string = api_url;
+  private url: string = API_URL;
 
   constructor(
     private http: HttpClient
