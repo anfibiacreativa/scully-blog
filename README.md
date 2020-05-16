@@ -51,7 +51,7 @@ Checkout the companion schematic
 https://github.com/anfibiacreativa/html-to-md-entry/blob/master/README.md
 and build it with `npm run build`. Link it running `npm run link` in the schematics folder and `npm run link html-to-md-entry` in the app root.
 
-Run the schematics with `ng generate html-to-md-entry:html-to-md-entry`
+Run the schematics with `ng generate html-to-md-entry:html-to-md-entry --path=entries`
 
 Serve the static Scully site with `npm run scully serve`
 
