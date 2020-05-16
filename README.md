@@ -37,6 +37,7 @@ Go to mockable.io and create an endpoint that returns a json like this
      "slug": ""
     },
     `
+
 with as many items as you wish.
 Replace the API endpoint url in the scully config `scully.scully-blog.config.js` and in the app constants `src/app/commons/constants/constants.ts`
 
