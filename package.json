@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "build:ci": "npm run clean && npm run build:prod && npm run scully -- --scanRoutes"
   },
   "private": true,
   "dependencies": {
