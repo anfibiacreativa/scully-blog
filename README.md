@@ -1,4 +1,4 @@
-![.github/workflows/release.yaml](https://github.com/anfibiacreativa/scully-blog/workflows/.github/workflows/release.yaml/badge.svg)
+![Build and Release](https://github.com/anfibiacreativa/scully-blog/workflows/Build%20and%20Release/badge.svg)
 
 
 # ScullyBlog
