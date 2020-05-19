@@ -3,7 +3,7 @@
 
 # ScullyBlog
 This is a work in progress as I play with Scully to better understand it!
-Still figuring out the YAML part and how to better leveage config.
+Still figuring out the YAML part and how to better leverage config.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
