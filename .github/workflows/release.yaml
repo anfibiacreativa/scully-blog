@@ -9,17 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.13.0]
+        node-version: [10.13.x]
 
     steps:
       - uses: actions/checkout@v1
 
       - uses: actions/cache@v1 # cache node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node- 
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+ 
 
       - name: Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -32,5 +33,4 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          npm ci
-          npm run build:ci
+          npm run build --prod && npm run scully -- --scanRoutes
