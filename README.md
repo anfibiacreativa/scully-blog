@@ -1,3 +1,6 @@
+[![build status](https://github.com/anfibiacreativa/scully-blog/workflows/Build/badge.svg)](https://github.com/anfibiacreativa/scully-blog/actions)
+
+
 # ScullyBlog
 This is a work in progress as I play with Scully to better understand it!
 Still figuring out the YAML part and how to better leveage config.
