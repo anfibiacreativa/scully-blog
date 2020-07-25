@@ -2,7 +2,7 @@
 title: blog-x
 description: 'blog description'
 published: true
-slugs:
+slugs: blog-x-x
 
 ---
 # blog-x

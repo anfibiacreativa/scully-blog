@@ -8,15 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title: string;
-  entries$: Observable<ScullyRoute[]>;
+  entries$: Observable<any> = this.scully.available$;
   defaultTitle = 'New Entry';
   defaultSummary = 'New Description';
 
   constructor(
-    private entries: ScullyRoutesService
+    private scully: ScullyRoutesService
   ) {}
 
   ngOnInit() {
-
+    this.entries$.subscribe(entries => {
+      console.log(entries);
+    });
   }
 }
